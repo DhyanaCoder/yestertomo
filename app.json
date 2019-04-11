@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/person1/person1",
+    "pages/sponsor/sponsor",
+    "pages/join/join"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "text": "首页",
+         "pagePath":"pages/index/index",
+         "iconPath":"icons/tabBar0.png",
+         "selectedIconPath":"icons/tabBar1.png"
+         
+       
+      },
+      {
+        "text": "发起",
+        "pagePath": "pages/sponsor/sponsor",
+        "iconPath": "icons/tabBar0.png",
+        "selectedIconPath": "icons/tabBar1.png"
+      },
+      {
+        "text": "加入",
+        "pagePath": "pages/join/join",
+        "iconPath": "icons/tabBar0.png",
+        "selectedIconPath": "icons/tabBar1.png"
+      },
+      {
+        "text":"个人",
+        "pagePath": "pages/person1/person1",
+        "iconPath": "icons/tabBar0.png",
+        "selectedIconPath": "icons/tabBar1.png"
+      }
+    ]},
+  "window":{
+   
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
