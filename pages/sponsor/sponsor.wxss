@@ -1,1 +1,26 @@
 /* pages/sponsor/sponsor.wxss */
+.button{
+  margin-top: 90rpx;
+  font-size:50rpx; 
+  height: 120rpx;
+  width: 630rpx;
+  align-items: center;
+  border-radius: 50rpx;
+  
+  color: black;
+  background:#09bb07
+  
+ 
+}
+.textarea{
+  height: 260rpx;
+  width:400rpx;
+  background: #dcdcdc;
+  border: #959595 solid 1rpx;
+  margin-left: 170rpx;
+  align-items: center;
+  font-size:20rpx;
+    display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

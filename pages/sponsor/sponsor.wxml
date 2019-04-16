@@ -1,1 +1,22 @@
+<button type="primary" class="button" style='  ' bindtap='bookClick' >
+预定
+</button>
+<view class="textarea" >
+<view>
+<view>Tips:发起排队，适用于预定</view>
+<view>对象仅按时间安排的服务</view>
+</view>
+</view>
 
+<button type="primary" class="button" style=' margin-top: 90rpx ;font-size:50rpx' bindtap='queueClick'>
+排队
+</button>
+<view class="textarea" >
+<view>
+<view>Tips:发起排队，适用于</view>
+<view>预定对象具有时间于类型</view>
+<view>选择属性的服务(例如预</view>
+<view>定可以进行多场地选择的</view>
+<view>服务）</view>
+</view>
+</view>

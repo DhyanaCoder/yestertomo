@@ -10,34 +10,34 @@
       {
         "text": "首页",
          "pagePath":"pages/index/index",
-         "iconPath":"icons/tabBar0.png",
-         "selectedIconPath":"icons/tabBar1.png"
+         "iconPath":"icons/tabBarIcons/index.png",
+         "selectedIconPath":"icons/tabBarIcons/index1.png"
          
        
       },
       {
         "text": "发起",
         "pagePath": "pages/sponsor/sponsor",
-        "iconPath": "icons/tabBar0.png",
-        "selectedIconPath": "icons/tabBar1.png"
+        "iconPath": "icons/tabBarIcons/sponsor.png",
+        "selectedIconPath": "icons/tabBarIcons/sponsor1.png"
       },
       {
         "text": "加入",
         "pagePath": "pages/join/join",
-        "iconPath": "icons/tabBar0.png",
-        "selectedIconPath": "icons/tabBar1.png"
+        "iconPath": "icons/tabBarIcons/join.png",
+        "selectedIconPath": "icons/tabBarIcons/join1.png"
       },
       {
         "text":"个人",
         "pagePath": "pages/person1/person1",
-        "iconPath": "icons/tabBar0.png",
-        "selectedIconPath": "icons/tabBar1.png"
+        "iconPath": "icons/tabBarIcons/person.png",
+        "selectedIconPath": "icons/tabBarIcons/person1.png"
       }
-    ]},
+    ],"color": "#0374b7"},
   "window":{
    
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "还没想好",
     "navigationBarTextStyle":"black"
   }
 }

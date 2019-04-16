@@ -1,2 +1,48 @@
 <!--pages/index/index.wxml-->
-<text>hello world</text>
+<!--轮播图-->
+<swiper class="image-swiper"  indicator-dots="{{true}}">
+<swiper-item class="image-item" wx:for="{{indexImage}}">
+<image class="image" src="{{item.srcx}}">
+</image>
+</swiper-item>
+</swiper>
+
+<!--正在进行/即将开始-->
+<view class="text" >
+<view ><text class="{{Tag1}}" style="margin-right:55rpx ;font-size:35rpx" bindtap="textTag1">正在进行</text><text class="{{Tag2}}" style="font-size:35rpx"bindtap="textTag2">即将开始</text></view>
+</view>
+
+<swiper current="{{currentIndex}}" style='height:725rpx'>
+
+
+<!--1页面-->
+<swiper-item catchtouchmove="stopTouchMove"><!--滑动触发绑定用于禁止滑动-->
+
+<scroll-view style='height:725rpx' scroll-y="true">
+<view  class="listview" wx:for="{{listview1}}" hover-class="swiper-itemHoverclass">
+<image  class="listview-image" src="{{item.srcx}}"></image>
+<view class="listviewDetail">
+<text style="font-size:40rpx"> {{item.title}} </text>
+<text class="contentText">{{item.content}}</text>
+</view>
+</view>
+</scroll-view>
+</swiper-item>
+
+
+
+
+<!--2页面-->
+<swiper-item catchtouchmove="stopTouchMove">
+<scroll-view style='height:725rpx' scroll-y="true">
+<view  class="listview" wx:for="{{listview2}}" hover-class="swiper-itemHoverclass">
+<image  class="listview-image" src="{{item.srcx}}"></image>
+<view class="listviewDetail">
+<text style="font-size:30rpx"> {{item.title}} </text>
+<text class="contentText">{{item.content}}</text>
+</view>
+</view>
+</scroll-view>
+</swiper-item>
+
+</swiper>

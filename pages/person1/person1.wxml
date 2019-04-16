@@ -1,0 +1,22 @@
+
+<view class="headView">
+<image src="https://pic4.zhimg.com/80/v2-5b9b3f019c7dff5ffb9d24dcf7925147_hd.jpg" class='headImage'> </image>
+<text style='margin-left:45rpx ;font-weight:bold'>总有那么一个人</text>
+<image style="width:30rpx;height:30rpx" src="/icons/sex_1.png"></image>
+</view>
+
+<view style='height:16rpx;background:#dcdcdc'></view>
+
+<view class="itemView" hover-class="itemViewhoverclass" style="height:80rpx">
+<image class="info-image" src="/icons/personInfoIcons/info.png"></image>
+<text style="font-size:22rpx;text-align:left;width:115rpx">个人资料</text>
+<image  src ="/icons/personInfoIcons/arrow.png" style="height:25rpx;width:10rpx;margin-left:500rpx"></image>
+</view>
+
+<view style='height:16rpx;background:#dcdcdc'></view>
+
+<view class="itemView" hover-class='itemViewhoverclass' wx:for="{{info}}">
+<image class="info-image" src="{{item.srcx}}"></image>
+<text style="font-size:22rpx;text-align:left;width:115rpx">{{item.text}}</text>
+<image  src ="/icons/personInfoIcons/arrow.png" style="height:25rpx;width:10rpx;margin-left:500rpx"></image>
+</view>

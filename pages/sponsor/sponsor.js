@@ -7,7 +7,18 @@ Page({
   data: {
 
   },
-
+   /**
+   * 预定按钮点击事件
+   */
+  bookClick:function(event){
+   console.log("bookClick");
+  },
+    /**
+   * 预定按钮点击事件
+   */
+  queueClick:function(event){
+    console.log("queueClick");
+  },
   /**
    * 生命周期函数--监听页面加载
    */

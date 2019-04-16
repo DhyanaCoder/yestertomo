@@ -1,0 +1,39 @@
+.headImage{
+  height:130rpx;
+  width:130rpx;
+  border-radius: 10rpx;
+
+}
+.headView{
+  padding-left: 40rpx;
+  padding-top: 40rpx;
+  padding-bottom:35rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+}
+.itemView{
+  height: 75rpx;
+  width: 100%;
+  display: flex;
+flex-direction: row;
+align-items: center;
+border-bottom: 2rpx #dcdcdc solid;
+}
+.itemViewhoverclass{
+  height: 75rpx;
+  width: 100%;
+  display: flex;
+flex-direction: row;
+align-items: center;
+border-bottom: 2rpx #dcdcdc solid;
+background: aqua;
+}
+.info-image{
+  height: 30rpx;
+  width:30rpx;
+  margin-left: 35rpx;
+  margin-right: 20rpx;
+
+}
