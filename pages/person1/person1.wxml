@@ -1,8 +1,10 @@
 
 <view class="headView">
-<image src="https://pic4.zhimg.com/80/v2-5b9b3f019c7dff5ffb9d24dcf7925147_hd.jpg" class='headImage'> </image>
-<text style='margin-left:45rpx ;font-weight:bold'>总有那么一个人</text>
-<image style="width:30rpx;height:30rpx" src="/icons/sex_1.png"></image>
+<image src="{{src}}" class='headImage'> </image>
+<text style='margin-left:45rpx ;font-weight:bold' wx:if="{{check}}">总有那么一个人</text>
+<image style="width:30rpx;height:30rpx" src="/icons/sex_1.png" wx:if="{{check}}"></image>
+<button class="button_origin" wx:if="{{check1}}" hover-class="button_pressed">授权/登录</button>
+
 </view>
 
 <view style='height:16rpx;background:#dcdcdc'></view>

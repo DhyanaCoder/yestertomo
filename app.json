@@ -1,19 +1,20 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/person1/person1",
     "pages/sponsor/sponsor",
-    "pages/join/join"
+    "pages/join/join",
+    "pages/sponsor/sponsorSuccess/sponsorSuccess",
+    "pages/sponsor/sponsorQueue/sponsorQueue",
+    "pages/sponsor/sponsorBook/sponsorBook"
   ],
   "tabBar": {
     "list": [
       {
         "text": "首页",
-         "pagePath":"pages/index/index",
-         "iconPath":"icons/tabBarIcons/index.png",
-         "selectedIconPath":"icons/tabBarIcons/index1.png"
-         
-       
+        "pagePath": "pages/index/index",
+        "iconPath": "icons/tabBarIcons/index.png",
+        "selectedIconPath": "icons/tabBarIcons/index1.png"
       },
       {
         "text": "发起",
@@ -28,16 +29,17 @@
         "selectedIconPath": "icons/tabBarIcons/join1.png"
       },
       {
-        "text":"个人",
+        "text": "个人",
         "pagePath": "pages/person1/person1",
         "iconPath": "icons/tabBarIcons/person.png",
         "selectedIconPath": "icons/tabBarIcons/person1.png"
       }
-    ],"color": "#0374b7"},
-  "window":{
-   
+    ],
+    "color": "#0374b7"
+  },
+  "window": {
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "还没想好",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

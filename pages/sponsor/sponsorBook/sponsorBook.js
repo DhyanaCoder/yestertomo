@@ -1,4 +1,4 @@
-// pages/sponsor/sponsor.js
+// pages/sponsor/sponsorBook/sponsorBook.js
 Page({
 
   /**
@@ -7,30 +7,7 @@ Page({
   data: {
 
   },
-   /**
-   * 预定按钮点击事件
-   */
-  bookClick:function(event){
-   console.log("bookClick");
-    wx.navigateTo({
-      url: 'sponsorBook/sponsorBook',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-    /**
-   * 预定按钮点击事件
-   */
-  queueClick:function(event){
-    console.log("queueClick");
-    wx.navigateTo({
-      url: 'sponsorQueue/sponsorQueue',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -2,7 +2,7 @@
   height:130rpx;
   width:130rpx;
   border-radius: 10rpx;
-
+  border: 1rpx gainsboro solid;
 }
 .headView{
   padding-left: 40rpx;
@@ -35,5 +35,28 @@ background: aqua;
   width:30rpx;
   margin-left: 35rpx;
   margin-right: 20rpx;
-
+}
+.button_origin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left:45rpx;
+  height:95rpx;
+  width:280rpx;
+  color: white;
+ background-color: #aa89bd;
+ border-radius: 13rpx;
+ font-size: 43rpx;
+}
+.button_pressed{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left:45rpx;
+  height:95rpx;
+  width:280rpx;
+  color: white;
+ background-color: #d7afee;
+ border-radius: 13rpx;
+ font-size: 43rpx;
 }

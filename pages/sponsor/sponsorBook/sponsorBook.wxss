@@ -1,0 +1,39 @@
+/* pages/sponsor/sponsorBook/sponsorBook.wxss */
+.layout{
+  height:1024rpx;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.text{
+
+  font:30rpx bold; 
+ text-align: center;
+ height: 45rpx;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+  border-bottom: green 1rpx solid;
+  margin-left: 17rpx;
+}
+.textlayout{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.secLayout{
+  display: flex;
+  flex-direction: row;
+
+}
+.button{
+  height:70rpx;
+  width:410rpx;
+  margin-left:170rpx;
+  border-radius: 35rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

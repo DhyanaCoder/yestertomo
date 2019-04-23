@@ -1,0 +1,15 @@
+.search{
+  display: flex;
+  flex-direction: row;
+  background-color: #e5e5e5;
+  width: 630rpx;
+  height: 60rpx;
+  margin-left: 60rpx;
+  border-radius: 28rpx;
+  align-items: center
+}
+.layout{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
