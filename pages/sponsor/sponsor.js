@@ -13,7 +13,7 @@ Page({
   bookClick:function(event){
    console.log("bookClick");
     wx.navigateTo({
-      url: 'sponsorBook/sponsorBook',
+      url: 'sponsorBookTime/sponsorBookTime',
       success: function (res) { },
       fail: function (res) { },
       complete: function (res) { },

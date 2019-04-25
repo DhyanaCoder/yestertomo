@@ -1,0 +1,26 @@
+<!--pages/sponsor/sponsorBookTime/sponsorBookTIme.wxml-->
+<!--标题-->
+<view class=".title">
+{{ProjectName}}
+</view>
+
+<view class="layout">
+
+<!--日期选择-->
+<view class="modelLayout1">
+<view class="{{item.classVar}}" wx:for="{{dateList}}" data-index="{{index}}" bindtap="dateSelectionClick">
+{{item.month}}月{{item.day}}日
+</view>
+</view>
+
+<view class="modelLayout2">
+<view class="timeSelection" hover-class='pressed' hover-stay-time='100' wx:for="{{timeSelectionList}}" >
+
+<view>
+<text style="margin-left:75rpx">{{item.timeValue}}</text>
+<image style="height:23rpx;width:12rpx;margin-left:150rpx" src="/icons/images/arrow.png"></image>
+</view>
+
+</view>
+</view>
+</view>

@@ -6,7 +6,9 @@
     "pages/join/join",
     "pages/sponsor/sponsorSuccess/sponsorSuccess",
     "pages/sponsor/sponsorQueue/sponsorQueue",
-    "pages/sponsor/sponsorBook/sponsorBook"
+
+
+    "pages/sponsor/sponsorBookTime/sponsorBookTime"
   ],
   "tabBar": {
     "list": [
