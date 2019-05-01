@@ -1,0 +1,32 @@
+<!--pages/person1/personInfo/personInfo.wxml-->
+<view class="listview1">
+  <view class="text">头像</view>
+  <image src="{{headImage}}" class="headImage">
+  </image>
+  <image src="/icons/images/arrow.png"style="height:26rpx;width:13rpx;margin-left:18rpx">
+  </image>
+</view>
+
+<view class="listview2">
+  <view class="text">
+    {{personName}}
+  </view>
+  <image src="/icons/images/arrow.png" style="height:26rpx;width:13rpx;margin-left:500rpx">
+  </image>
+</view>
+
+<view class="listview2">
+  <view class="text">
+    {{personAddress}}
+  </view>
+  <image src="/icons/images/arrow.png" style="height:26rpx;width:13rpx; margin-left:500rpx">
+  </image>
+</view>
+
+<view class="listview2">
+  <view class="text">
+    {{personPhoneNumber}}
+  </view>
+  <image src="/icons/images/arrow.png" style="height:26rpx;width:13rpx;margin-left:500rpx">
+  </image>
+</view>

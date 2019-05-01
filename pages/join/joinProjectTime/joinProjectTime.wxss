@@ -1,0 +1,74 @@
+/* pages/sponsor/sponsorBookTime/sponsorBookTIme.wxss */
+.title{
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+height:75rpx;
+background:#cbcbcb;  
+font-size: 32rpx;
+}
+.layout{
+display: flex;
+flex-direction: row;
+width: 100%;
+}
+.modelLayout1{
+ 
+  width:225rpx;
+   background: #cbcbcb;
+}
+.modelLayout2{
+  width:480rpx;
+  margin-left: 45rpx;
+}
+.dateLayout{
+  width:225rpx;
+  height:75rpx;
+  background: #0068b7;
+  border-bottom-left-radius: 10rpx;
+  border-top-left-radius: 10rpx;
+  
+  border-left: white 1rpx solid;
+  border-bottom: white 1rpx solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.timeSelection{
+  height:90rpx;
+  border-bottom: black 1rpx solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+
+}
+.pressed{
+  background: #cbcbcb;
+}
+.dateLayoutPressed{
+  width:225rpx;
+  height:75rpx;
+  background:white;
+  border-bottom-left-radius: 10rpx;
+  border-top-left-radius: 10rpx;
+  border-left: white 1rpx solid;
+  border-bottom: white 1rpx solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color:black;
+}
+.timeSelection{
+  height:90rpx;
+  border-bottom: black 1rpx solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+
+}

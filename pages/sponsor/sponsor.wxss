@@ -12,6 +12,7 @@
   
  
 }
+
 .textarea{
   height: 260rpx;
   width:400rpx;

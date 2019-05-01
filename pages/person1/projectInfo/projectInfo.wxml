@@ -1,0 +1,83 @@
+<!--pages/person1/mySponsor/mySponsor.wxml-->
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;'>名称:</view>
+  <view  class="text" style="margin-left:162rpx">
+  {{name}}wdwdwdwdwed
+  </view>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d; width:120rpx;height：24rpx'>活动介绍:</view>
+  <textarea class="text" style="height:203rpx;width:420rpx;maxLength:140;margin-left:115rpx" disabled="true" 
+    placeholder='{{introduction}}' >
+  
+  </textarea>
+</view>
+
+<view class="listview1" >
+  <text style='font-size:25rpx;color:#6d6d6d; width:120rpx;height：24rpx'>图片详情:</text>
+  <image src="{{image}}" style="height:175rpx ;width:175rpx;margin-top" >
+  </image>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;width:"100rpx'>日期:</view>
+  <view  class="text" style="margin-left:162rpx">
+   {{date}}
+  </view>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;width:"50rpx"'>时间:</view>
+  <view  class="text" style="margin-left:162rpx">
+    {{time}}
+  </view>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;width:"50rpx"'>活动人数:</view>
+  <view  class="text" style="margin-left:115rpx">
+    {{amount}}
+  </view>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;width:"50rpx;"'>地址:</view>
+  <view  class="text" style="margin-left:162rpx">
+   {{address}}
+  </view>
+</view>
+
+<view style="background:#e5e5e5;height:30rpx;">
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;width:"50rpx;"'>联系人:</view>
+  <view  class="text" style="margin-left:140rpx">
+   {{contact}}
+  </view>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;width:"50rpx;"'>联系方式:</view>
+  <view  class="text" style="margin-left:115rpx">
+   {{contactNumber}}
+  </view>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;width:"50rpx;"'>项目口令:</view>
+  <input  type="text" class="input" style="margin-left:115rpx">
+   {{projectId}}
+  </input>
+  <button type="default" style="width:100rpx;height:62.8rpx; font-size:22rpx">复制</button>
+</view>
+
+<view class="listview" >
+  <text style='font-size:25rpx;color:#6d6d6d; '>首页显示</text>
+  <checkbox value="是否在首页显示"  checked='{{checkSelection}}' style="margin-left:115rpx"></checkbox> 
+</view>
+
+<view class="listview" >
+  <button type='primary'>取消活动</button>
+</view>

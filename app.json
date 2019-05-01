@@ -4,11 +4,15 @@
     "pages/person1/person1",
     "pages/sponsor/sponsor",
     "pages/join/join",
+    "pages/join/joinProjectTime/joinProjectTime",
+    "pages/join/locationChoice/locationChoice",
     "pages/sponsor/sponsorSuccess/sponsorSuccess",
     "pages/sponsor/sponsorQueue/sponsorQueue",
-
-
-    "pages/sponsor/sponsorBookTime/sponsorBookTime"
+    "pages/person1/contactUs/contactUs",
+    "pages/sponsor/sponsorBookTime/sponsorBookTime",
+    "pages/person1/personInfo/personInfo",
+    "projectList/projectList",
+    "pages/person1/projectInfo/projectInfo"
   ],
   "tabBar": {
     "list": [

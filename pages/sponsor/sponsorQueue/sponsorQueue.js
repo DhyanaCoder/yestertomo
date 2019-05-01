@@ -27,8 +27,10 @@ Page({
   hintContent:"请输入你的项目名称"
   }
   ],
-    date: '2019-04-19',
-    time: '12:01',
+    startDate: '2019-04-19',
+    startTime: '12:01',
+    endDate: '2019-04-19',
+    endTime: '12:01',
     index1:'0',
     array1:[
     "分钟","小时","2小时"

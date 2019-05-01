@@ -1,0 +1,27 @@
+<!--pages/sponsor/sponsorBookTime/locationChoice/locationChoice.wxml-->
+<view style="background:#dcdcdc;height:100vh;width:100%">
+
+<view class="locationLayout" >
+<view class="{{item.classState}}" wx:for="{{locationList1}}" data-index="{{index}}" bindtap='locationClick1'>
+{{item.number}}号
+</view>
+</view>
+ 
+<view class="locationLayout" >
+<view class="{{item.classState}}" wx:for="{{locationList2}}" data-index="{{index}}"bindtap='locationClick2'>
+{{item.number}}号
+</view>
+</view>
+
+
+<view class="tips">
+<text>暂无其他场位</text>
+<text style="margin-top:25rpx;">请选其他日期</text>
+</view>
+
+<view class="buttonLayout">
+ <button type="primary"  class="button" bindtap='upClick'>
+ 提交
+ </button>
+ </view> 
+</view>

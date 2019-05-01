@@ -1,0 +1,31 @@
+/* pages/person1/mySponsor/mySponsor.wxss */
+.listview{
+ display: flex;
+ flex-direction: row;
+  margin-left: 65rpx;
+  margin-top: 35rpx;
+  margin-right: 65rpx;
+  border-bottom: 1rpx gainsboro solid;
+  align-items: center;
+}
+.text{
+
+  font-size:33rpx;
+  margin-left: 0rpx;
+
+  display: inline-block;
+}
+.listview1{
+   display: flex;
+ flex-direction: column;
+  margin-left: 65rpx;
+  margin-top: 35rpx;
+  margin-right: 65rpx;
+  border-bottom: 1rpx gainsboro solid;
+  height: 250rpx;
+}
+.input{
+  width:200rpx;
+  border:black 1rpx solid;
+
+}

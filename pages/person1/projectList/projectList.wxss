@@ -1,0 +1,42 @@
+/* pages/person1/myJoin/mJoin.wxss */
+.Layout{
+  background: #bfbfbf;
+  height:100vh;
+  width:100%;
+  padding-top: 9rpx;
+}
+.listItem{
+  width:732rpx;
+  height:270rpx;
+  border-radius: 7.33rpx;
+  background: white;
+  align-items: center;
+  display:flex;
+  flex-direction: row; 
+  margin-left:9rpx;
+  margin-bottom: 9rpx;
+}
+.image{
+  margin-left:24rpx;
+  width:250rpx;
+  height:215rpx;
+}
+.textContent{
+  width:204rpx;
+  height:207rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 37rpx;
+  
+}
+.textContext1{
+
+  display: flex;
+  flex-direction: column;
+
+}
+.tag{
+  position: relative;
+  left:90rpx;
+  bottom:80rpx
+}

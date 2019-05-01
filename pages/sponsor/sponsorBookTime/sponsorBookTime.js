@@ -1,72 +1,125 @@
-// pages/sponsor/sponsorBookTime/sponsorBookTIme.js
+// pages/sponsor/sponsorBookTime/sponsorBookTime.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-   dateList:[
-     {
-       month:4,
-       day:24,
-       classVar: "dateLayout",/**样式变量 按下是dateLayoutPressed 正常是dateLayout */
-     },
-     {
-       month:4,
-       day:25,
-       classVar: "dateLayoutPressed",/**样式变量 按下是dateLayoutPressed 正常是dateLayout */
-     }
-   ],
-   number:[
+  startAndend:[
     {
-      numberValue:"一号"
-    },
-     {
-       numberValue: "二号"
-     },
-     {
-       numberValue: "三号"
-     },
-     {
-       numberValue: "四号"
-     },
-     {
-       numberValue: "五号"
-     },
-   ],
-   four:[{},{},{},{}],
-   ProjectName:"项目名称",
-    timeSelectionList:[
-    {
-      timeValue:"8:00~10:00"
+      startDate: "2019-4-01",
+      startTime: "12:01",
+      endDate: "2019-4-01",
+      endTime: "12:01",
     },
     {
-      timeValue: "8:00~10:00"
+      startDate: "2019-4-01",
+      startTime: "12:01",
+      endDate: "2019-4-01",
+      endTime: "12:01",
     },
-    {
-      timeValue: "8:00~10:00"
-    },
-    {
-      timeValue: "8:00~10:00"
-    },
-    {
-      timeValue: "8:00~10:00"
-    },
-      {
-        timeValue: "8:00~10:00"
-      },
-      {
-        timeValue: "8:00~10:00"
-      },
-      {
-        timeValue: "8:00~10:00"
-      },
-      {
-        timeValue: "8:00~10:00"
-      },
+  ],
+    array1: [
+      "分钟", "小时", "2小时"
     ],
-    
+    array2: [
+      1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+    ],
+    index1:"0",
+    index2:"0",
+
   },
+  /**
+ * 场次数量选择器触发函数
+ */
+  bindLCPickerChange(e) {
+    this.setData(
+      {
+        index2: e.detail.value
+      }
+    )
+  },
+  /**
+ * 时间段选择器触发函数
+ */
+  bindTSPickerChange(e) {
+    this.setData(
+      {
+        index1: e.detail.value
+      }
+    )
+  },
+  /**
+   * 增加时间段子项函数
+   */
+  addItem:function(e){
+   var item={
+     startDate: "2019-4-01",
+     startTime: "12:01",
+     endDate: "2019-4-01",
+     endTime: "12:01",
+   };
+   var list=this.data.startAndend;
+   list.push(item);
+   this.setData({
+     'startAndend':this.data.startAndend
+   })
+  },
+  /**
+   * 删除时间段子项函数
+   */
+  deleteItem:function(e){
+    var list=this.data.startAndend;
+    list.splice(e.currentTarget.dataset.index,1);
+    this.setData({
+      'startAndend':this.data.startAndend
+    })
+  },
+  /**
+    * 开始日期选择器触发函数
+    */
+  bindStartDateChange(e) {
+    var j = 'startAndend[' + e.currentTarget.dataset.index + '].startDate'
+    this.setData({
+      [j]: e.detail.value
+    })
+  },
+  /**
+   * 开始时间选择器触发函数
+   */
+  bindStartTimeChange(e) {
+    console.log("wdqwdqwdqwdqwd");
+    var j = 'startAndend['+ e.currentTarget.dataset.index+ '].startTime'
+    this.setData(
+      {
+        
+       [j]: e.detail.value
+      }
+    )
+  },
+  /**
+   * 结束日期选择器触发函数
+   */
+  bindEndDateChange(e) {
+    var j = 'startAndend[' + e.currentTarget.dataset.index + '].endDate'
+    this.setData({
+      [j]: e.detail.value
+    })
+  },
+  /**
+   * 结束时间选择器触发函数
+   */
+  bindEndTimeChange(e) {
+    console.log("wdqwdqwdqwdqwd");
+    var j = 'startAndend[' + e.currentTarget.dataset.index + '].endTime'
+    this.setData(
+      {
+
+        [j]: e.detail.value
+      }
+    )
+  },
+  
 
   /**
    * 生命周期函数--监听页面加载
@@ -122,25 +175,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  /**
-   * 点击日期
-   */
-  dateSelectionClick:function(e){
-    console.log("wdwqdqwd")
-    var i = e.currentTarget.dataset.index;
-   var array=this.data.dateList;
-   array.forEach((item,index,attr)=>{
-    var allItem="dateList["+index+"].classVar";
-    this.setData({
-      [allItem]:"dateLayout"
-    })
-    if(index==i){
-      var allItem1 = "dateList[" + index + "].classVar";
-      this.setData({
-        [allItem1]:"dateLayoutPressed"
-      })
-    }
-   })
   }
 })

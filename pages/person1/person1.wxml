@@ -9,7 +9,7 @@
 
 <view style='height:16rpx;background:#dcdcdc'></view>
 
-<view class="itemView" hover-class="itemViewhoverclass" style="height:80rpx">
+<view class="itemView" hover-class="itemViewhoverclass" style="height:80rpx" bindtap='LoadpersonInfo'>
 <image class="info-image" src="/icons/personInfoIcons/info.png"></image>
 <text style="font-size:22rpx;text-align:left;width:115rpx">个人资料</text>
 <image  src ="/icons/personInfoIcons/arrow.png" style="height:25rpx;width:10rpx;margin-left:500rpx"></image>
@@ -17,7 +17,7 @@
 
 <view style='height:16rpx;background:#dcdcdc'></view>
 
-<view class="itemView" hover-class='itemViewhoverclass' wx:for="{{info}}">
+<view class="itemView" hover-class='itemViewhoverclass' wx:for="{{info}}" bindtap='{{item.bindfunction}}'>
 <image class="info-image" src="{{item.srcx}}"></image>
 <text style="font-size:22rpx;text-align:left;width:115rpx">{{item.text}}</text>
 <image  src ="/icons/personInfoIcons/arrow.png" style="height:25rpx;width:10rpx;margin-left:500rpx"></image>

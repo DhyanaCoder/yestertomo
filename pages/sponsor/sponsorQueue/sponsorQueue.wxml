@@ -9,13 +9,13 @@
 <text style='font-size:20rpx;color:#cfcece; '>开始时间-日期</text>
   <picker
     mode="date"
-    value="{{date}}"
+    value="{{startDate}}"
     start="2019-04-19"
     end="2100-09-01"
     bindchange="bindDateChange"
   >
     <view style="font-size:33rpx;color:#8b8b8b;border-bottom:#cfcece 1rpx solid;">
-      当前选择: {{date}}
+      当前选择: {{startDate}}
     </view>
   </picker>
   </view>
@@ -24,16 +24,47 @@
 <text style='font-size:20rpx;color:#cfcece; '>开始时间-时间</text>
 <picker
     mode="time"
-    value="{{time}}"
+    value="{{startTime}}"
     start="09:01"
     end="21:01"
     bindchange="bindTimeChange"
   >
     <view style="font-size:33rpx;color:#8b8b8b;border-bottom:#cfcece 1rpx solid;">
-      当前选择: {{time}}
+      当前选择: {{startTime}}
     </view>
   </picker>
   </view>
+
+<view class="listview" >
+<text style='font-size:20rpx;color:#cfcece; '>结束时间-日期</text>
+  <picker
+    mode="date"
+    value="{{endDate}}"
+    start="2019-04-19"
+    end="2100-09-01"
+    bindchange="bindDateChange"
+  >
+    <view style="font-size:33rpx;color:#8b8b8b;border-bottom:#cfcece 1rpx solid;">
+      当前选择: {{endDate}}
+    </view>
+  </picker>
+  </view>
+
+  <view class="listview" >
+<text style='font-size:20rpx;color:#cfcece; '>结束时间-时间</text>
+<picker
+    mode="time"
+    value="{{endTime}}"
+    start="09:01"
+    end="21:01"
+    bindchange="bindTimeChange"
+  >
+    <view style="font-size:33rpx;color:#8b8b8b;border-bottom:#cfcece 1rpx solid;">
+      当前选择: {{endTime}}
+    </view>
+  </picker>
+  </view>
+
 
  <view class="listview" >
 <text style='font-size:20rpx;color:#cfcece; '>单位时间段</text>
