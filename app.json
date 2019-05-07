@@ -11,8 +11,12 @@
     "pages/person1/contactUs/contactUs",
     "pages/sponsor/sponsorBookTime/sponsorBookTime",
     "pages/person1/personInfo/personInfo",
-    "projectList/projectList",
-    "pages/person1/projectInfo/projectInfo"
+    "pages/person1/projectList/projectList",
+    "pages/person1/projectInfo/projectInfo",
+    "pages/person1/joinProjectInfo/joinProjectInfo",
+    "pages/join/projectIntroduction/projectIntroduction",
+    "pages/join/joinSuccess/joinSuccess",
+    "pages/sponsor/sponsor1"
   ],
   "tabBar": {
     "list": [
@@ -24,7 +28,7 @@
       },
       {
         "text": "发起",
-        "pagePath": "pages/sponsor/sponsor",
+        "pagePath": "pages/sponsor/sponsor1",
         "iconPath": "icons/tabBarIcons/sponsor.png",
         "selectedIconPath": "icons/tabBarIcons/sponsor1.png"
       },

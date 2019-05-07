@@ -16,8 +16,10 @@
 
 <view class="listview1" >
   <text style='font-size:25rpx;color:#6d6d6d; width:120rpx;height：24rpx'>图片详情:</text>
-  <image src="{{image}}" style="height:175rpx ;width:175rpx;margin-top" >
+  <view class="imgList">
+  <image src="{{item}}" style="height:175rpx ;width:175rpx;margin-left:20rpx;" wx:for="{{imgList}}" data-index="{{index}}" bindtap='large'>
   </image>
+  </view>
 </view>
 
 <view class="listview" >

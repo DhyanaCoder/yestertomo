@@ -1,0 +1,64 @@
+/* pages/sponsor/sponsor1.wxss */
+.circle{
+  width:163rpx;
+  height:163rpx;
+  border-radius: 50%;
+  background:gainsboro;
+  box-shadow: 4rpx 4rpx 4rpx 4rpx black;
+  position: absolute;
+  left:520rpx;
+  top:119rpx;
+}
+.pressedCircle{
+  width:163rpx;
+  height:163rpx;
+  border-radius: 50%;
+  background:yellow;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx black;
+  position: absolute;
+  left:520rpx;
+  top:119rpx;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  margin-top:120rpx;
+  margin-left: 77rpx;
+  width:522rpx;
+  height:163rpx;
+  background: gainsboro;
+  border-bottom-left-radius: 43rpx;
+  border-top-left-radius:43rpx; 
+  justify-content: center;
+  align-items: center;
+  font-size: 22rpx;
+}
+.button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 43rpx;
+  margin-top:30rpx;
+}
+.circle1{
+  width:163rpx;
+  height:163rpx;
+  border-radius: 50%;
+  background:gainsboro;
+  box-shadow: 4rpx 4rpx 4rpx 4rpx black;
+  position: absolute;
+  left:520rpx;
+  top:354rpx;
+  
+}
+.pressedCircle1{
+  width:163rpx;
+  height:163rpx;
+  border-radius: 50%;
+  background:yellow;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx black;
+  position: absolute;
+  left:520rpx;
+  top:354rpx;
+}

@@ -13,9 +13,29 @@ Page({
     address:"番禺公安局",
     contact:"叶涛",
     contactNumber:"1553232233",
-    projectId:"12123"
+    projectId:"12123",
+    imgList:[
+      "http://img3.imgtn.bdimg.com/it/u=1377704254,2739513137&fm=26&gp=0.jpg",
+      "http://img4.imgtn.bdimg.com/it/u=2175799279,4044345991&fm=26&gp=0.jpg"
+    ]
   },
+ /**
+  * 点击图片放大
+  */
+  large:function(e){
 
+      console.log(e.currentTarget.dataset.index);
+      var src = e.currentTarget.dataset.src;//获取data-src
+      var array = this.data.imgList;
+      var index = e.currentTarget.dataset.index
+      console.log(array)
+      wx.previewImage({
+        current: array[index], // 当前显示图片的http链接
+        urls: array,
+
+      })
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */

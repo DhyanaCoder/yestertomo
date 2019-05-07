@@ -1,0 +1,34 @@
+/* pages/join/projectIntroduction/projectIntroduction.wxss */
+.projectIntro{
+  margin-top: 22rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 55rpx;
+  margin-right: 90rpx;
+  font-size: 28rpx;
+}
+.textArea{
+  margin-left:30rpx;
+  width:446rpx;
+  font-size:28rpx;
+  height:200rpx;
+  font-weight:bold;
+}
+.tH{
+  color:black;
+}
+.joinButton{
+  margin-top:442rpx;
+  height:83rpx;
+  width: 100%;
+  background: #f0f0f0;
+  text-align: center;
+  display: flex;
+  flex-direction:row;
+}
+.imgList{
+ display: flex;
+ flex-direction: row;
+  height:195rpx;
+
+}

@@ -1,6 +1,6 @@
 <!--pages/person1/myJoin/mJoin.wxml-->
 <view class="Layout">
-  <view class="listItem" wx:for="{{joinList}}">
+  <view class="listItem" wx:for="{{joinList}}" bindtap="checkInfo">
     <image class="image" src="{{item.image}}">
     </image>
     <view class="textContent">

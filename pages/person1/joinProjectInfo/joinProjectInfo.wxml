@@ -1,0 +1,85 @@
+<!--pages/person1/joinProjectInfo/joinProjectInfo.wxml-->
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;'>名称:</view>
+  <view  class="text" style="margin-left:162rpx">
+   {{name}}
+  </view>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;'>日期:</view>
+  <view  class="text" style="margin-left:162rpx">
+   {{date}}
+  </view>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;'>时间:</view>
+  <view  class="text" style="margin-left:162rpx">
+   {{time}}
+  </view>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;'>地址:</view>
+  <view  class="text" style="margin-left:162rpx">
+   {{address}}
+  </view>
+</view>
+
+<view class="listviewLayout" >
+  <view class="itemview" wx:for="{{InfoList}}">
+    <view>
+      {{item.name}}
+    </view>
+    <view>
+      {{item.startTime}}
+    </view>
+    <view>
+      {{item.endTime}}
+    </view>
+  </view>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d; width:120rpx;height：24rpx'>活动介绍:</view>
+  <textarea class="text" style="height:203rpx;width:420rpx;maxLength:140;margin-left:115rpx" disabled="true" 
+    placeholder='{{introduction}}' placeholder-class="textArea" >
+  </textarea>
+</view>
+
+<view class="listview1" >
+  <text style='font-size:25rpx;color:#6d6d6d; width:120rpx;height：24rpx'>图片详情:</text>
+   <view class="imgList">
+  <image src="{{item}}" style="height:175rpx ;width:175rpx;margin-left:20rpx;" wx:for="{{imgList}}" data-index="{{index}}" bindtap='large'>
+  </image>
+  </view>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;width:"50rpx"'>活动人数:</view>
+  <view  class="text" style="margin-left:115rpx">
+    {{amount}}
+  </view>
+</view>
+
+<view style="background:#e5e5e5;height:30rpx;">
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;width:"50rpx;"'>联系人:</view>
+  <view  class="text" style="margin-left:140rpx">
+   {{contact}}
+  </view>
+</view>
+
+<view class="listview" >
+  <view style='font-size:25rpx;color:#6d6d6d;width:"50rpx;"'>联系方式:</view>
+  <view  class="text" style="margin-left:115rpx">
+   {{contactNumber}}
+  </view>
+</view>
+
+<view class="listview" >
+  <button type='primary'>退出活动</button>
+</view>

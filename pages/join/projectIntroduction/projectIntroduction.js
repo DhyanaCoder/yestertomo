@@ -1,39 +1,35 @@
-// pages/person1/myJoin/mJoin.js
+// pages/join/projectIntroduction/projectIntroduction.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    joinList:[
-      {
-        name:"活动名称",
-        image:"http://img4.imgtn.bdimg.com/it/u=549286678,3997911196&fm=26&gp=0.jpg",
-        startTime:"11.16",
-        endTime:"11.20",
-        address:"广州番禺区公安局",
-        key:"进行中",
-        color:"green"
-      },
-      {
-        name: "活动名称",
-        image: "http://img4.imgtn.bdimg.com/it/u=549286678,3997911196&fm=26&gp=0.jpg",
-        startTime: "11.16",
-        endTime: "11.20",
-        address: "广州番禺区公安局",
-        key: "已结束",
-        color: "grey"
-      }
-    ]
+   name:"GDUT",
+   introduction:"djkdqwjdjwqjwjndjsjjdjsjsasdjdjsjn",
+   contact:"yt",
+   contactNumber:"121212122",
+   pictures:[
+     'http://img4.imgtn.bdimg.com/it/u=3197911274,2872061394&fm=26&gp=0.jpg',
+     'http://img0.imgtn.bdimg.com/it/u=2658770292,1972313488&fm=26&gp=0.jpg',
+   ]
   },
-   /**
-    * 加载项目信息
-    */
-    checkInfo:function(){
-     wx.navigateTo({
-       url: '../joinProjectInfo/joinProjectInfo',
-     })
-    },
+  /**
+   * 放大图片
+   */
+  large:function(e){
+    console.log(e.currentTarget.dataset.index);
+    var src = e.currentTarget.dataset.src;//获取data-src
+    var array=this.data.pictures;
+    var index=e.currentTarget.dataset.index
+    console.log(array)
+    wx.previewImage({
+            current: array[index], // 当前显示图片的http链接
+            urls: array,
+
+    })
+  }
+,
   /**
    * 生命周期函数--监听页面加载
    */
