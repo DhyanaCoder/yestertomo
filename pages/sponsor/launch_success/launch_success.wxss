@@ -1,0 +1,53 @@
+/* pages/sponsor/launch_success/launch_success.wxss */
+page{
+  background-color: aliceblue;
+
+}
+.box{
+  margin-top: 120rpx; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx;
+  font-size: 45rpx;
+}
+.text_info{
+  margin:15rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+button{
+  margin-top: 30rpx;
+  width: 70%;
+}
+.btn{
+  margin-right: 15rpx;
+  height: 60rpx;
+  font-weight: 500;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  box-shadow: 5rpx 5rpx 8rpx 5rpx #185696;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 110rpx;
+  background-color: #0c9ee2;
+  color: #fff;
+}
+.hover-btn{
+  background-color: aliceblue !important;
+  color: gray !important;
+  box-shadow: 0rpx 0rpx 0rpx 0rpx #fff !important;
+}

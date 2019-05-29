@@ -1,0 +1,16 @@
+<!--pages/person/personal_info/personal_info.wxml-->
+
+<view class='container'>
+  <view class='headimage'>
+    <view class='text'>头像</view>
+    <image src='/icons/scan.png'></image>
+    <view class='arrow'/>
+  </view>
+  
+  <view class='userinfobox' wx:for="{{userinfo}}" wx:key="name">
+    <view data-name="{{item.name}}">
+      <view class='text'>{{item.text}}</view>
+      <view class='arrow'/>
+    </view>
+  </view>
+</view>

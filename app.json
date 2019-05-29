@@ -1,22 +1,25 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/person1/person1",
-    "pages/sponsor/sponsor",
+    "pages/test/test",
+    "pages/handbook/handbook",
+    "pages/sponsor/launch_success/launch_success",
+    "pages/sponsor/launch_book/launch_book",
+    "pages/sponsor/launch_queue/launch_queue",
+    "pages/join/join_successpage/join_successpage",
+    "pages/person/myjoinedlist/myjoineditem_detail/myjoineditem_detail",
+    "pages/join/join_chose_obj/join_chose_obj",
+    "pages/person/myjoinedlist/myjoinedlist",
+    "pages/person/personal_info/personal_info",
+    "pages/person/person",
     "pages/join/join",
-    "pages/join/joinProjectTime/joinProjectTime",
-    "pages/join/locationChoice/locationChoice",
-    "pages/sponsor/sponsorSuccess/sponsorSuccess",
-    "pages/sponsor/sponsorQueue/sponsorQueue",
-    "pages/person1/contactUs/contactUs",
-    "pages/sponsor/sponsorBookTime/sponsorBookTime",
-    "pages/person1/personInfo/personInfo",
-    "pages/person1/projectList/projectList",
-    "pages/person1/projectInfo/projectInfo",
-    "pages/person1/joinProjectInfo/joinProjectInfo",
-    "pages/join/projectIntroduction/projectIntroduction",
-    "pages/join/joinSuccess/joinSuccess",
-    "pages/sponsor/sponsor1"
+    "pages/join/join_iteminfo/join_iteminfo",
+    "pages/sponsor/sponsor",
+    "pages/person/mysponsorlist/mysponsorlist",
+    "pages/person/contact_us/contact_us",
+    "pages/join/join_choosetime/join_choosetime",
+    "pages/person/mysponsorlist/mylauncheditem_detail/mylauncheditem_detail",
+    "pages/person/template/template"
   ],
   "tabBar": {
     "list": [
@@ -28,7 +31,7 @@
       },
       {
         "text": "发起",
-        "pagePath": "pages/sponsor/sponsor1",
+        "pagePath": "pages/sponsor/sponsor",
         "iconPath": "icons/tabBarIcons/sponsor.png",
         "selectedIconPath": "icons/tabBarIcons/sponsor1.png"
       },
@@ -40,16 +43,18 @@
       },
       {
         "text": "个人",
-        "pagePath": "pages/person1/person1",
+        "pagePath": "pages/person/person",
         "iconPath": "icons/tabBarIcons/person.png",
         "selectedIconPath": "icons/tabBarIcons/person1.png"
       }
     ],
-    "color": "#0374b7"
+    "selectedColor": "#0374b7",
+    "color": "#000000"
   },
   "window": {
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "还没想好",
-    "navigationBarTextStyle": "black"
-  }
+    "navigationBarBackgroundColor": "#7fffd4",
+    "navigationBarTitleText": "121排队预定客栈",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
 }

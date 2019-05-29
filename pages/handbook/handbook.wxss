@@ -1,0 +1,15 @@
+/* pages/handbook/handbook.wxss */
+.a_container{
+  padding: 0 25rpx;
+  background-color: aliceblue;
+}
+.title{
+  text-align: center;
+  font-size: 40rpx;
+  font-weight:bold;
+}
+.content{
+  text-align: left;
+  font-size:32rpx;
+  margin-top:50rpx;
+}

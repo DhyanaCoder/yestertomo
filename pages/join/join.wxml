@@ -1,8 +1,13 @@
-<view class="layout">
-<view class="search">
-<image src='/icons/search.png' style="height:40rpx; width:40rpx;margin-left:25rpx;">
-</image>
-<input type="text" style='font-size:30rpx' placeholder="                   请输入编号  "></input>
+<!--pages/join/join.wxml-->
+<view class='container'>
+  <view class='searchboxcontainer'>
+    <view class='searchbox'>
+      <image src='/icons/search.png'></image>
+        <view class='borderleft'></view> <!--左边线-->
+        <input type='text' confirm-type='search' placeholder='搜索活动/项目口令'placeholder-class='placeholder' bindconfirm='searchbywd'></input>
+    </view>
+  </view>
 </view>
-<image src="/icons/scan.png" hidden="true" style="height:306rpx;width:306rpx;margin-left:225rpx ;margin-top:640rpx;"></image>
+<view class='quest_mark' bindtap='to_handbook'>
+  <image src='/icons/ques_mark.png'></image>
 </view>

@@ -1,94 +1,96 @@
 // pages/index/index.js
+var util = require('../../utils/util.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-     indexImage:[
-      {
-         srcx:"http://img1.imgtn.bdimg.com/it/u=3332927451,1856117576&fm=26&gp=0.jpg",
-      },
-      {
-  srcx:"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3001740815,126276908&fm=26&gp=0.jpg",
-      },
-      {
-        srcx:"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1563085931,1875757424&fm=26&gp=0.jpg",
-      },
-       {
-         srcx: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1563085931,1875757424&fm=26&gp=0.jpg",
-       }
-     ],
-     listview1:[
-       {
-         title:"title1",
-         srcx:"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1704104585,2070310680&fm=27&gp=0.jpg",
-         content:"松隆松隆子",
-       },
-       {
-         title:"title2",
-         srcx:"http://img3.imgtn.bdimg.com/it/u=1624639366,364330247&fm=26&gp=0.jpg",
-         content:"松隆子松隆子松隆子松隆子"
-       },
-       {
-         title: "title2",
-         srcx: "http://img3.imgtn.bdimg.com/it/u=1624639366,364330247&fm=26&gp=0.jpg",
-         content: "松隆子松隆子松隆子松隆子"
-       },
-       {
-         title: "title2",
-         srcx: "http://img3.imgtn.bdimg.com/it/u=1624639366,364330247&fm=26&gp=0.jpg",
-         content: "松隆子松隆子松隆子松隆子"
-       },
-       {
-         title: "title2",
-         srcx: "http://img3.imgtn.bdimg.com/it/u=1624639366,364330247&fm=26&gp=0.jpg",
-         content: "松隆子松隆子松隆子松隆子"
-       },
-  
-     ],
-    listview2: [
-      {
-        title: "title1",
-        srcx: "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1704104585,2070310680&fm=27&gp=0.jpg",
-        content: "松隆子松隆子松隆子松隆子松隆子松隆子",
-      },
-      {
-        title: "title2",
-        srcx: "http://img3.imgtn.bdimg.com/it/u=1624639366,364330247&fm=26&gp=0.jpg",
-        content: "松隆子松隆子松隆子松隆子松隆子松隆子"
-      },
-      {
-        title: "title3",
-        srcx: "http://img5.imgtn.bdimg.com/it/u=1288601965,3991234862&fm=26&gp=0.jpg",
-        content: "松隆子松隆子松隆子松隆子松隆子松隆子",
-      }
-      ,
-      {
-        title: "title3",
-        srcx: "http://img5.imgtn.bdimg.com/it/u=1288601965,3991234862&fm=26&gp=0.jpg",
-        content: "松隆子松隆子松隆子松隆子松隆子松隆子",
-      }
-      ,
-      {
-        title: "title3",
-        srcx: "http://img5.imgtn.bdimg.com/it/u=1288601965,3991234862&fm=26&gp=0.jpg",
-        content: "松隆子松隆子松隆子松隆子松隆子松隆子",
-      }
-    ],
-     currentIndex:"0",
-     Tag1:"text-selected",
-     Tag2:"text-orginal"
+    swiperitem: [{ name: '进入使用说明url', url: '../handbook/handbook', src: '../../icons/swiper1.png' },
+      { name: '快速活动发起url', url: '../sponsor/launch_book/launch_book', src: '../../icons/swiper2.png' }], 
+    imageUrls:['', '../sponsor/launch_book/launch_boox'],
+      // { name: '热门活动延涛大佬征婚url', url: '2', src: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg' }],
+      showingitems:[],
+      doing_items:[],
+      willbe_items:[],
+      show_ing: 'show', //'show'表示当前展示的项目类别栏目 ''表示当前不展示的
+      show_willbe: '' 
   },
-
-
+  swipclick: function (e) {//点击图片触发事件
+    console.log(e)
+    console.log(this.data.swiperitem[e.currentTarget.dataset.index].url);
+    var url = this.data.swiperitem[e.currentTarget.dataset.index].url
+    wx.navigateTo({
+      url: url,
+    })
+  },
+  changeshow: function(){
+    this.setData({
+      show_ing: this.data.show_ing? '': 'show',
+      show_willbe: this.data.show_willbe? '': 'show'
+    }) 
+  },
+  binditemshow:function(e){
+    if (e.target.id == 'ing' && this.data.show_willbe){
+      this.changeshow()
+      this.setData({
+        showingitems: this.data.doing_items
+      })
+    }
+    else if(e.target.id == 'willbe' && this.data.show_ing){
+      this.changeshow()
+      this.setData({
+        showingitems: this.data.willbe_items
+      })
+    }
+  },
+  toiteminfo_page: function(e){
+    wx.navigateTo({
+      url: '../join/join_iteminfo/join_iteminfo?wd=' + e.currentTarget.dataset.name,
+    })
+    console.log(e.currentTarget.dataset.name)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (options){
+    wx.showLoading({
+      title: '加载中',
+    })
+    console.log(options)
+    var that=this;
+    var success = function(res){
+      wx.hideLoading()
+      console.log(res)
+      that.setData({
+        doing_items: res.data.doing_items,
+        willbe_items: res.data.willbe_items,
+        showingitems: res.data.doing_items,
 
+      })
+    }
+    util.getiteminfo_bywd('home_page', success)
+    // wx.request({
+    //   url: 'http://127.0.0.1:5000/items',
+    //   method: "POST",
+    //   success(res){
+    //     if (res.data.errNum == 0){
+    //       that.setData({
+    //         doing_items: res.data.data.doing_items,
+    //         willbe_items: res.data.data.willbe_items
+    //       })
+    //     }
+    //     else if (res.data.errNum == -1){
+    //       console.log(res.data.errMsg)
+    //     }
+    //     else{
+    //       console.log(res.data.data.willbe_items)
+    //       console.log('server ERROR')
+    //     }
+    //   }
+    // })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -100,7 +102,26 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.showLoading({
+      title: '加载中',
+    })
+    var that = this;
+    var success = function (res) {
+      wx.hideLoading()
+      console.log(res)
+      if (res.data){
+        that.setData({
+          doing_items: res.data.doing_items,
+          willbe_items: res.data.willbe_items,
+          showingitems: res.data.doing_items,
+          show_ing: 'show',
+          show_willbe: ''
+        })
+      }else{
+        console.log('server Error.')
+      }
+    }
+    util.getiteminfo_bywd('home_page', success)
   },
 
   /**
@@ -121,7 +142,21 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    wx.showLoading({
+      title: '加载中',
+    })
+    var that = this;
+    var success = function (res) {
+      wx.hideLoading()
+      console.log(res)
+      that.setData({
+        doing_items: res.data.doing_items,
+        willbe_items: res.data.willbe_items,
+        showingitems: res.data.doing_items
 
+      })
+    }
+    util.getiteminfo_bywd('home_page', success)
   },
 
   /**
@@ -136,26 +171,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-    /**
-   * 点击正在进行或者即将进行的切换操作。
-   */
-  textTag1(event){
-this.setData({
-  currentIndex:0,
-  Tag1:"text-selected",
-  Tag2: "text-orginal",
-})  
-},
-
-  textTag2(event) {
-    this.setData({
-      currentIndex: 1,
-      Tag2: "text-selected",
-      Tag1: "text-orginal",
-    })
-  },
-  stopTouchMove: function () {
-    return false;
   }
 })

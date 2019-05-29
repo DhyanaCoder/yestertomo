@@ -1,0 +1,74 @@
+/* pages/person/template/template.wxss */
+.listnull_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top:  220rpx; 
+  width: 100%;
+}
+.listnull_title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 999;
+  height: 128rpx;
+  width: 425rpx; 
+  font-size: 48rpx;
+  letter-spacing: 8rpx;
+}
+.listnull_title::before{
+  content: '';
+  z-index: 995;
+  top: 0rpx;
+  left: 0rpx;
+  position: absolute;
+  height: 53rpx;
+  width: 53rpx;
+  box-sizing: border-box;
+  border-left: 5rpx #000 solid; 
+  border-top: 5rpx #000 solid; 
+  /* border-right: 5rpx #fff solid; 
+  border-bottom: 5rpx #fff solid; 
+  box-shadow: 5rpx 5rpx 5rpx 8.8rpx #8b8b8b inset; */
+}
+.listnull_title::after{
+  content: '';
+  z-index: 995;
+  bottom: 0rpx;
+  right: 0rpx;
+  position: absolute;
+  height: 53rpx;
+  width: 53rpx;
+  box-sizing: border-box;
+  border-bottom: 5rpx #000 solid; 
+  border-right: 5rpx #000 solid; 
+  /* box-shadow: 5rpx 5rpx 10rpx 8.8rpx #000 inset; */
+}
+.listnull_image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 450rpx;
+  width: 545rpx;
+  justify-content: flex-end;
+  padding-bottom: 20rpx; 
+}
+.listnull_image image{
+  height: 280rpx;
+  width: 495rpx;
+}
+.listnull_bottext{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 63rpx;
+  min-width: 495rpx;
+  width: auto;
+  font-size: 36rpx;
+  color: #838383;
+  letter-spacing: 3rpx;
+}

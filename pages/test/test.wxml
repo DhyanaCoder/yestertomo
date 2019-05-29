@@ -1,0 +1,28 @@
+<!--pages/test/test.wxml-->
+<text>pages/test/test.wxml</text>
+<text>{{res}}</text>
+<button bindtap='onclick'>test</button>
+<view class='obj_box'></view>
+<view class='triangle'></view>
+<form bindsubmit="clickFormView" report-submit="true" class="form-view">
+
+  <view class='launch_btnbox'>
+      <button form-type="submit" class="formId_button">
+        <view class='launch_btn' hover-class='hover-btn' bindtap='to_chosetime'>加入
+        
+        </view>
+    </button>
+  </view>
+</form>
+
+  <view class='launch_btnbox'>
+    <view class='launch_btn' hover-class='hover-btn' bindtap='to_chosetime'>加入</view>
+  </view>
+
+<form bindsubmit="clickFormView" report-submit="true" class="form-view">
+  <view class='launch_btnbox'>
+    <button class="open-data-btn" form-type="submit" hover-class='hover-btn' style='  width: 81%;'  bindtap='to_chosetime' >
+        <view class='launch_btn'>加入</view>
+    </button>
+  </view>
+</form>

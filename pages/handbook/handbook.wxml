@@ -1,0 +1,69 @@
+<!--pages/handbook/handbook.wxml-->
+<scroll-view scroll-y scroll-into-view="{{toView}}" style='height: {{winHeight}}px;' scroll-with-animation='true'>
+  <view class='a_container'>
+    <view class="title">
+      使用手册
+    </view>
+    <view class="content" style='font-weight:bold'>
+    本文包含小程序中一些重要部分的使用说明
+    </view>
+    <view class="content">
+      1、正在进行和即将开始的活动会在这里显示。
+    </view>
+    <image src='/icons/handbookPic/index_0.png' style='width:750rpx;'>
+    </image>
+    <view class="content">
+      2、小程序底部会有四个导航按钮，点击相应按钮可以进入相应页面
+    </view>
+    <image src='/icons/handbookPic/index_1.png' style='width:750rpx;'>
+    </image>
+
+    <view class="content" id='launch'>
+      3、点击发起导航按钮，然后点击排队，可以进行发起排队事件
+      这里着重说明一些重要的表单的填写
+    </view>
+    <image src='/icons/handbookPic/sponsor_0.png' style='width:750rpx;'>
+    </image>
+
+    <image src='/icons/handbookPic/sponsor_1.png' style='width:750rpx;height:560rpx;margin-top:30rpx'>
+    </image>
+
+    <image src='/icons/handbookPic/sponsor_2.png' style='width:750rpx; height:560rpx;margin-top:30rpx'>
+    </image>
+
+    <view class="content">
+      4、同样得，点击预定，可以进行发起预定事件
+      这里着重说明一些与排队不同的表单的填写，其他二者相同
+    </view>
+
+    <image src='/icons/handbookPic/book_0.png' style='width:750rpx; height:560rpx;'>
+    </image>
+
+    <image src='/icons/handbookPic/book_1.png' style='width:750rpx; height:560rpx;margin-top:30rpx'>
+    </image>
+
+    <view class="content" id='join'>
+      5、加入部分功能说明
+      点击加入导航按钮可以进入如下界面
+    </view>
+    <image src='/icons/handbookPic/join_0.png' style='width:750rpx; height:560rpx;margin-top:30rpx'>
+    </image>
+
+    <view class="content">
+      6、进入项目信息页面后，点击加入之后进入日期选择页面
+    </view>
+    <image src='/icons/handbookPic/join_1.png' style='width:750rpx; height:560rpx;margin-top:30rpx'>
+    </image>
+
+    <view class="content">
+      7、选完日期和时间后，进入选择场地的页面
+    </view>
+    <image src='/icons/handbookPic/join_2.png' style='width:750rpx; height:580rpx;margin-top:30rpx'>
+    </image>
+
+    <view class="content" style='font-weight:bold'>
+    完 
+    如还有不清楚的地方可联系我们的客服（个人-->联系我们）
+    </view>
+  </view>
+</scroll-view>

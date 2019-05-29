@@ -1,4 +1,4 @@
-/**app.wxss**/
+/**app.wxss
 .container {
   height: 100%;
   display: flex;
@@ -7,10 +7,20 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
-.listview{
-  margin-left: 65rpx;
-  margin-top: 35rpx;
+} **/
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: space-between;
+  font-size: 32rpx;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+/*行内垂直居中*/
+.center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 ::-webkit-scrollbar{
 
@@ -21,3 +31,22 @@ height: 0;
 color: transparent;
 
 }
+/* 收集表单 */
+.formId_button{ 
+      position: relative;
+      z-index: -1;
+	    width:100%; 
+	     height: 100%;  
+	     background-color: transparent;   /*按钮透明*/  
+	     border:none;				/*设置按钮边框*/
+}
+.formId_button::after{
+	    border:none;
+ }
+
+.open-data-btn {
+padding: 0;
+background: none;
+position: static;
+}
+

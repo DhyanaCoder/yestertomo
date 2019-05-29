@@ -1,0 +1,30 @@
+<view class='container'>
+  <!--上方头像用户信息区-->
+  <view class='headview'>
+    <!--授权按键-->
+    <view class='login_btn'>
+      <button open-type='getUserInfo' bindgetuserinfo='getUserInfo' wx:if="{{!hasUserInfo}}">
+      授权/登录
+      </button>
+    <!--已授权 显示用户的信息-->
+    </view>
+    <view class='userinfo' wx:if="{{hasUserInfo}}">
+      <image  src='{{userInfo.avatarUrl}}' class='headimage'></image>
+      <view class="userinfo-nickname" class="nickname">{{userInfo.nickName}}</view>
+      <image src='../../icons/sex_{{userInfo.gender}}.ico' class='seximage'></image>
+    </view>
+  </view>
+
+  
+  <!-- <view class='personinfo' hover-class='itempressed' bindtap='to_userinfo'>
+    <image src='../../icons/personInfoIcons/info.png'></image>
+    <view hover-class="button_pressed" >个人资料</view>
+  </view> -->
+  <view style='height: 25rpx; background-color: #dcdcdc;'></view>
+  <view wx:for="{{infoitems}}" wx:key="url">
+    <view class='itemsstyle' hover-class='itempressed' data-name="{{item.url}}" bindtap='to_personalpage'>
+      <image src='{{item.srcx}}' ></image>
+      <view>{{item.text}}</view>
+    </view>
+  </view>
+</view>

@@ -5,30 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
   },
-   /**
-   * 预定按钮点击事件
-   */
-  bookClick:function(event){
-   console.log("bookClick");
+  to_launch_queue: function(e){
     wx.navigateTo({
-      url: 'sponsorBookTime/sponsorBookTime',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
+      url: './launch_queue/launch_queue',
+    })
+  }, 
+  to_launch_book:function(e){
+    wx.navigateTo({
+      url: './launch_book/launch_book',
     })
   },
-    /**
-   * 预定按钮点击事件
-   */
-  queueClick:function(event){
-    console.log("queueClick");
+  to_handbook:function(){
     wx.navigateTo({
-      url: 'sponsorQueue/sponsorQueue',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
+      url: '../handbook/handbook?view_id=launch',
     })
   },
   /**

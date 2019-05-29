@@ -1,0 +1,10 @@
+<!--pages/join/join_successpage/join_successpage.wxml-->
+<view class='cantainer'>
+  <view class='box'>
+    <icon type='success' size='250rpx'></icon>
+    <view class='text'>加入成功</view>
+    <view class='text_info'>活动/项目名称: {{item_name}}</view>
+    <view class='text_info'>地点：{{address}}</view>
+  </view>
+  <button bindtap='backto_index'>回到首页</button>
+</view>

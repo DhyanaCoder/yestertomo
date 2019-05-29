@@ -1,0 +1,33 @@
+/* pages/person/contact_us/contact_us.wxss */
+.Layout{
+  height:1344rpx;
+  width:100%;
+  background: #eeeeee;
+  padding-top: 115rpx;
+}
+.contactUs{
+  margin-left:112rpx;
+  background: white;
+  border-radius: 18rpx;
+  height:390rpx;
+  width:525rpx; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+.item{
+
+  margin-left:50rpx;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 45rpx;
+  height: 78rpx;
+  border-bottom: 1rpx black solid;
+  width:420rpx; 
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,31 @@
+<!--pages/person/contact_us/contact_us.wxml-->
+<view class="Layout">
+<view class="contactUs">
+
+<view class="item" style="margin-top:50rpx;">
+  <image src="/icons/images/group.png" style="height:50rpx;width:55rpx;">
+</image>
+<view class="text" style=" font-size:35rpx;height:50rpx;margin-left:25rpx">
+  Team：yestertomo
+</view>
+</view>
+
+<view class="item">
+  <image src="/icons/images/wechat.png" style="height:50rpx;width:55rpx;">
+</image>
+<view class="text" style=" font-size:35rpx;height:50rpx;margin-left:25rpx">
+Wechat: 1515789106
+</view>
+</view>
+
+
+<view class="item">
+<image src="/icons/images/QQ.png" style="height:50rpx;width:55rpx;">
+</image>
+<view class="text" style=" font-size:35rpx;height:50rpx;margin-left:25rpx">
+QQ: 1515789106
+</view>
+</view>
+
+</view>
+</view>

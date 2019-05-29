@@ -1,0 +1,128 @@
+<!--pages/sponsor/launch_queue/launch_queue.wxml-->
+<!--pages/sponsor/launch_queue/launch_queue.wxml-->
+<view class='container'>
+<form bindsubmit="submit">
+  <view class='title'>发起排队项目</view>
+  <view class='a_text_box'>
+    <view class='item_title necess_item_title'>活动/项目名称:</view>
+    <view class='input_box'>
+      <input name='item_name' bindinput='getlen_item_name' maxlength='15'></input> 
+      <view class='length'>{{len.item_name}}/15</view>   
+    </view>
+  </view>
+
+  <view class='a_text_box'>
+    <view class='item_title necess_item_title'>活动/项目介绍:</view> <!--三行输入区域-->
+    <view class='input_box_3'>
+      <textarea name='text_info' maxlength='150' bindinput='getlen_item_textinfo'></textarea>
+      <view class='length'>{{len.item_textinfo}}/150</view>   
+    </view>
+  </view>
+
+  <view class='a_text_box'>
+    <view class='item_title'>封面图片:</view>
+    <view class='image_box'>
+    <image src='{{upload_pic_status[0]}}' wx:if='{{upload_pic_status[1]}}' data-src='{{upload_pic_status[0]}}' bindtap='preview_pic'></image> <!--上传图片按钮消失-->
+    <button type='primary'  bindtap='choose_pic' wx:if='{{!upload_pic_status[1]}}'>上传图片介绍</button>
+    <view class='cancel_upload_btn' wx:if='{{upload_pic_status[1]}}' bindtap='cancel_upload_pic'>
+      <icon type='cancel' size='30'></icon>
+    </view>
+    </view>
+  </view>
+
+  <view class='datetime_box' wx:for='{{timetable}}' wx:index='index' wx:key='index' style='margin-bottom: 50rpx;'>
+    <view class='item_title'>时间段</view>
+      <view class='item_date'>开始日期：
+        <picker mode='date' style='width: 70%;' bindchange='get_datetime' data-name='start_date' data-index='{{index}}' start='{{now_date}}'><view class='{{timetable_css[index].start_date?"date filled":"date"}}' value='{{timetable[index].start_date}}' >{{item.start_date}}</view></picker>
+      </view>
+        
+      <view class='item_date'>结束日期：
+        <picker mode='date' style='width: 70%;' bindchange='get_datetime' value='{{timetable[index].end_date}}' data-name='end_date' data-index='{{index}}' start="{{item.start_date}}"><view class='{{timetable_css[index].end_date?"date filled":"date"}}'>{{item.end_date}}</view></picker> 
+      </view>
+    <view class='item_title time_title'>开始时间~结束时间</view>
+    <view class='time_box'>
+      <!-- <view class='cancel_btn' bindtap='del_datetime' data-index='{{index}}'>
+        <image src='/icons/sub.png'></image>
+      </view> -->
+      <view class='time'>
+        <picker mode='time' data-name='start_time' bindchange='get_datetime'  value='{{timetable[index].start_time}}' data-index='{{index}}'>
+          <view class='{{timetable_css[index].start_time?"timevalue filled":"timevalue"}}'>{{item.start_time? item.start_time: '开始'}}</view>
+        </picker>
+        <view style='font-size:50rpx'>~</view>
+        <picker mode='time' data-name='end_time' bindchange='get_datetime'  value='{{timetable[index].end_time}}' data-index='{{index}}' start='{{timetable[index].start_time}}'>
+          <view class='{{timetable_css[index].end_time?"timevalue filled":"timevalue"}}'>{{item.end_time? item.end_time: '结束'}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='add_timebox'>
+    <view class='btn center' bindtap='add_datetime'>
+        <image src='/icons/add.png'></image>
+    </view>
+    <view class='text'>添加时间段</view>
+  </view> -->
+
+  <view class='obj_box'  wx:for='{{objs}}' wx:index='index' wx:key='index' style='margin-bottom:50rpx;'>
+    <view class='obj_title'>场地名称</view>
+
+    <view class='obj'>
+      <!-- <view class='btn center' data-index='{{index}}' bindtap='del_obj'><image src='/icons/sub.png'></image></view> -->
+      <view class='obj_input name'>
+        <view>默认</view>
+        <!-- <input bindinput='change_objs' data-name='obj_name' data-index='{{index}}' maxlength='8' placeholder='{{index+1}}号场' value='{{objs[index].obj_name}}'></input> -->
+        <!-- <view class='length'>{{len.objs[index].obj_name}}/8</view> -->
+      </view>
+
+      <view class='obj_input minOrd_time'>
+        <input maxlength='3' bindinput='change_objs' data-name='minOrd_time' data-index='{{index}}' placeholder='60' type='number'></input>
+        <view class='length'>{{len.objs[index].minOrd_time}}/3</view>
+      </view>
+      
+      <view class='obj_input ordable_sum'>
+        <input maxlength='3' bindinput='change_objs' data-name='ordable_sum' data-index='{{index}}' placeholder='1' type='number'></input>
+        <view class='length'>{{len.objs[index].ordable_sum}}/3</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class='contact_box'>
+    <view class='item_title necess_item_title'>联系人:</view>
+    <view class='input_box'>
+      <input bindinput='getlen_contacter' maxlength='10' name='contacter'></input> 
+      <view class='length'>{{len.contacter}}/10</view>   
+    </view>
+  </view>
+
+  <view class='contact_box'>
+    <view class='item_title necess_item_title'>联系方式:</view>
+    <view class='input_box' style='width: 60%;'>
+      <input bindinput='getlen_contacts' maxlength='15' name='contacts'></input> 
+      <view class='length'>{{len.contacts}}/15</view>   
+    </view>
+  </view>
+
+  <view class='a_text_box'>
+    <view class='item_title' >活动/项目地址</view>
+    <view class='picker_box'>
+      <view class='city'>地区：</view>
+      <picker mode='region' value='address[1]' bindchange='get_address'>
+      <view class='{{address[1]?"input filled":"input"}}'>{{address[0][0]}}-{{address[0][1]}}-{{address[0][2]}}</view>
+      </picker>
+    </view>
+    <view class='address'>
+      <view class='city_info'>详情地址:</view>
+      <view class='address_input'>
+        <textarea maxlength='50' bindinput='getlen_address_detail' name='address_detail'></textarea>
+        <view class='length'>{{len.address_detail}}/15</view>   
+      </view>
+    </view>
+  </view>
+
+  <view class='page_show_box'>
+    <view class='page_show'>首页展示：</view>
+    <switch bindchange='test' checked='{{page_show}}' bindchange='get_page_show' color='#1ea0fa'></switch>
+  </view>
+
+  <button type='primary' class='sub_btn' form-type='submit'>发起</button>
+</form>
+</view>

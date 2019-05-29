@@ -1,0 +1,76 @@
+/* pages/test/test.wxss */
+.obj_box{
+  position: relative;
+  height: 120rpx;
+  width: 125rpx;
+  background-color: white;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2rpx #22ac38 solid;
+}
+
+.obj_box::after{
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  height: 0;
+  width: 0;
+  border-width: 25rpx;
+  border-style: solid;
+   border-color:#22ac38 #22ac38 transparent transparent;
+}
+.obj_box::before{
+  position: absolute;
+  z-index: 999;
+  content: '';
+  right: 5%;
+  top: 5%;
+  height: 0;
+  width: 0;
+  border-width: 8rpx;
+  border-style: solid;
+  border-radius: 8rpx;
+  border-color:aquamarine;
+}
+.triangle{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 0;
+  width: 0;
+  border-width: 25rpx;
+  border-style: solid;
+   border-color:#FFCCCC #FFCCCC transparent transparent;
+}
+.launch_btnbox{
+  bottom: 2rpx;
+  height: 115rpx;
+  width: 100%;
+  background-color: #dbdbdb;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.launch_btnbox .launch_btn{
+
+  height: 85rpx;
+  background-color: #22ac38;
+  box-shadow: -5rpx 4rpx #878787;
+  color: #fff;
+  font-size: 48rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+}
+.hover-btn .launch_btn{
+  box-shadow: 0rpx 0rpx !important;
+  background-color: #85f697 !important; 
+}
+
+

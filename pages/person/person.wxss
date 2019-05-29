@@ -1,0 +1,98 @@
+.headview{
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  height: 196rpx;
+  border-bottom:2rpx #dcdcdc solid;
+  align-items: center;
+  position: relative;
+  background-color:#7fffd4; 
+}
+.headview .login_btn{
+  left: 235rpx;
+  top:52rpx;
+  position: absolute; /*按键绝对定位*/ 
+}
+.headview button{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  text-align: center; /*文字水平垂直居中*/
+  
+  font-size: 48rpx;
+  height: 91rpx;
+  width: 280rpx;
+  color: white;
+  background-color: #d7afee;
+}
+.headview button.button-hover{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  text-align: center; /*文字水平垂直居中*/
+  font-size: 48rpx;
+  height: 91rpx;
+  width: 280rpx;
+  color: white;
+  background-color: #aa89bd;
+}
+.headview .userinfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left:35rpx; 
+  position: relative;
+}
+.headview .headimage{
+  border-radius: 5px;
+  height:125rpx;
+  width: 125rpx;
+}
+.headview .nickname{
+  margin-left:40rpx;
+  margin-right:10rpx;  
+  position: relative;
+  font-size: 40rpx;
+  top: -40rpx;
+}
+.headview .seximage{
+  height: 35rpx;
+  width: 35rpx;
+  position: relative;
+  top: -40rpx;
+}
+.personinfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 105rpx;
+  width: 100%;
+  border-top: 15rpx #dcdcdc solid;
+  border-bottom: 15rpx #dcdcdc solid;
+  box-sizing: border-box; 
+  padding: 20rpx 0;
+}
+.personinfo image{
+  margin: 0 35rpx;
+  height: 40rpx;
+  width: 40rpx; 
+}
+
+.itempressed{
+  background-color: #dcdcdc;
+}
+.itemsstyle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 105rpx;
+  width: 100%;
+  box-sizing: border-box; 
+  padding: 20rpx 0;
+  border-bottom: 3rpx #dcdcdc solid;
+}
+.itemsstyle image{
+  margin: 0 35rpx;
+  height: 40rpx;
+  width: 40rpx; 
+}

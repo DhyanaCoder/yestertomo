@@ -1,5 +1,37 @@
-<view style="height:1rpx;background:black;">
+<!--pages/sponsor/sponsor.wxml-->
+<view class='quest_mark' bindtap='to_handbook'>
+  <image src='/icons/ques_mark.png'></image>
 </view>
-<view class="item">
-<image src="/icons/images/button0.png" style="width:168rpx;height:168rpx"></image>
+<view class='a_container'>
+
+  <view class='box'>
+    <view class="text">
+      <text>Tips:发起排队,适用于预定\n对象仅按时间安排的服务</text>
+    </view>
+    <view class="circle" hover-class='hover-circle' bindtap='to_launch_queue'>
+      <text>排\n队</text>
+    </view>
+  </view>
+
+  <view class='box'>
+    <view class="text">
+      <text>Tips:发起预定,适用于预定对象具有时间类型等属性的服务</text>
+    </view>
+    <view class="circle" hover-class='hover-circle' bindtap='to_launch_book'>
+      <text>预\n定</text>
+    </view>
+  </view>
 </view>
+
+
+
+
+
+
+
+
+
+
+
+
+

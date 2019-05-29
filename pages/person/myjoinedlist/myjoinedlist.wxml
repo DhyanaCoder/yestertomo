@@ -1,0 +1,19 @@
+<!--pages/person/myjoinedlist/myjoinedlist.wxml-->
+<view class='a_container'>
+  <view class='itembox' wx:for="{{myjoinedlist}}" wx:for-index='index' wx:key="pass_id" data-wd="{{item.pass_id}}" hover-class='hover_itembox' bindtap='to_joineditem_detail'>
+    <view class='imagebox'><image src="{{item.img_info?('https://yun.hookeii.cn/itemimg/'+item.img_info):'/icons/default.png'}}"></image></view>
+    <view class='text'>
+      <view class='{{item.logic_del?(item.overed?"over_itemtitle":"ing_itemtitle"):("logic_del_itemtitle")}}'>{{item.item_name}}</view>
+      <view class='itemtextinfo'>
+      {{start_time[index][0]+'.'+start_time[index][1]}}
+      <text>\t{{start_time[index][2]+ ':' + start_time[index][3]+' ~'}}</text>
+      {{end_time[index][0]+ '.' + end_time[index][1]}}
+      <text>\t{{end_time[index][2]+ ':'+ end_time[index][3]}}\n</text>
+      <view>{{item.address}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+  <import src='../template/template.wxml'/>
+<template is='join_listnull' wx:if='{{listnull}}'></template>

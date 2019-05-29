@@ -1,0 +1,71 @@
+<view class='container'>
+
+<scroll-view scroll-y="true" style='height: 1080rpx;'>
+
+
+  <view class='a_container'>
+
+    <view class='item_name'>
+      <view class='title'>名称：</view>
+      <view class='content'>{{item_name}}</view>
+    </view>
+
+    <view class='item_textinfo'>
+      <view class='title'>活动介绍：</view>
+      <view class='content'>{{text_info}}</view>
+    </view> 
+
+    <view class='img_info'>
+        <view class='title'>图片详情：</view>
+        <view class='image_box'>
+          <image class='image' src='{{img_info?("https://yun.hookeii.cn/itemimg/"+img_info):"/icons/default.png"}}' bindtap='preview_img'></image>
+        </view>
+    </view>
+
+    <view class='time'>
+      <view class='title'>开始时间：</view>
+      <view class='content'><text>{{start_time[0]+ '.' + start_time[1] + '.' + start_time[2]}}\t{{start_time[3]+ ':' + start_time[4]}}</text></view>
+    </view>
+
+    <view class='time'>
+      <view class='title'>结束时间：</view>
+      <view class='content'><text>{{end_time[0]+ '.' + end_time[1] + '.' + end_time[2]}}\t{{end_time[3]+ ':' + end_time[4]}}</text></view>
+    </view>
+
+    <view class='time'>
+      <view class='title'>联系人：</view>
+      <view class='content'>{{contacter}}</view>
+    </view>
+
+    <view class='time'>
+      <view class='title'>联系方式：</view>
+      <view class='content'>{{contacts}}</view>
+    </view>
+
+    <view class='time'>
+      <view class='title'>地址：</view>
+      <view class='content'><text>{{item_address}}</text></view>
+    </view>
+
+    <view class='time'>
+      <view class='title'>发起时间：</view>
+      <view class='content'><text>{{lau_time[0]+ '.' + lau_time[1] + '.' + lau_time[2]}}\t{{lau_time[3]+ ':' + lau_time[4]}}</text></view>
+    </view>
+
+    <view class='time'>
+      <view class='title'>项目类型：</view>
+      <view class='content'><text>{{(item_type == 1)?'排队类型':'预定类型'}}</text></view>
+    </view>
+    
+  </view>
+
+</scroll-view>
+
+<form bindsubmit="clickFormView" report-submit="true" class="form-view">
+  <view class='launch_btnbox'>
+    <button class="open-data-btn" form-type="submit" hover-class='hover-btn' style='  width: 81%;'  bindtap='to_chosetime' >
+        <view class='launch_btn'>加入</view>
+    </button>
+  </view>
+</form>
+</view>

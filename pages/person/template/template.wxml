@@ -1,0 +1,20 @@
+<!--pages/person/template/template.wxml-->
+<template name='join_listnull'>
+  <view class='listnull_box'>
+    <view class='listnull_title'>! 加入列表为空</view>
+    <view class='listnull_image'>
+      <image src='/icons/listnull.png'></image>
+    </view>
+    <view class='listnull_bottext'>快去体验加入项目/活动吧 !</view>
+  </view>
+</template>
+
+<template name='launch_listnull'>
+  <view class='listnull_box'>
+    <view class='listnull_title'>! 发起列表为空</view>
+    <view class='listnull_image'>
+      <image src='/icons/listnull.png'></image>
+    </view>
+    <view class='listnull_bottext'>马上发起活动邀请小伙伴加入吧 !</view>
+  </view>
+</template>

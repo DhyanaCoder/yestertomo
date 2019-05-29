@@ -1,0 +1,19 @@
+<!--pages/join/join_choosetime/join_choosetime.wxml-->
+<view class='container'>
+  <view class='title'>{{item_name}}</view>
+  <view class='box'>
+    <view class='datebox'>
+      <scroll-view scroll-y='true' style='height: 100%;'>
+      <!-- <view class='chose_date'>{{item.date[1]}}月{{item.date[2]}}日</view> -->
+      <view wx:for='{{obj_data}}' wx:key='*this' wx:for-index='index' bindtap='chose_date' data-index='{{index}}' class='{{(choseing_index==index)?"chose_date":"date"}}' >{{item.date[1]}}月{{item.date[2]}}日</view>
+      </scroll-view>
+    </view>
+    <view class='timesbox'>
+      <scroll-view scroll-y='true' style='height: 100%;'>
+        <view class='time' wx:for='{{obj_data[choseing_index].objs}}' wx:key='*this' wx:for-index='time_index' data-time_index='{{time_index}}' hover-class='click_time' bindtap='to_chose_obj'>
+          <text>开始时间：{{item.start_time[0] < 10?('0' + item.start_time[0]):(item.start_time[0])}}：{{item.start_time[1] < 10?('0' + item.start_time[1]):(item.start_time[1])}}</text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

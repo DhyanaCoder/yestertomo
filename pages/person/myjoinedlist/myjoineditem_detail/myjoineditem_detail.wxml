@@ -1,0 +1,83 @@
+<!--pages/person/myjoinedlist/myjoineditem_detail/myjoineditem_detail.wxml-->
+<view class='container'>
+  <view class='info_box'>
+    <view class='title'>名称:</view>
+    <view class='text'>{{item_info.item_name}}</view>
+  </view>
+  
+  <view class='info_box'>
+    <view class='title'>开始日期:</view>
+    <view class='text'>
+        <text>{{item_info.start_time[0] + '.' + item_info.start_time[1] + '.' + item_info.start_time[2]}}\t{{(item_info.start_time[3] < 10)?('0' + item_info.start_time[3]): (item_info.start_time[3])}}: {{(item_info.start_time[4] < 10)?('0' + item_info.start_time[4]):(item_info.start_time[4])
+}}</text>
+    </view>
+  </view>
+
+  <view class='info_box'>
+    <view class='title'>截止日期:</view>
+    <view class='text'>
+        <text>{{item_info.end_time[0] + '.' + item_info.end_time[1] + '.' + item_info.end_time[2]}}\t{{(item_info.end_time[3] < 10)?('0' + item_info.end_time[3]): (item_info.end_time[3])}}: {{(item_info.end_time[4] < 10)?('0' + item_info.end_time[4]): (item_info.end_time[4])}}</text>
+    </view>
+  </view>
+
+  <view class='info_box'>
+    <view class='title'>地址:</view>
+    <view class='text'>{{item_info.item_address}}</view>
+  </view>
+
+
+  <view class='time_box'>
+      <view class='title_box'>场次信息</view>
+      <view class='title_box'>开始时间</view>
+      <view class='title_box'>结束时间</view>
+      <view class='title_box'>队列号码</view>
+
+    <view class='obj_info_box' wx:for='{{my_obj}}' wx:key='*this'>
+      <view class='text'>
+        <text>{{item.obj_name}}</text>    
+      </view>
+      <view class='text'>
+        <text>{{item.startOrd_time[1] + '月' + item.startOrd_time[2] + '日'}}\n{{(item.startOrd_time[3] < 10)?('0' + item.startOrd_time[3]): (item.startOrd_time[3])}}: {{(item.startOrd_time[4] < 10)?('0' + item.startOrd_time[4]): (item.startOrd_time[4])}}</text>
+      </view>
+      <view class='text'>
+        <text>{{item.end_time[1] + '月' + item.end_time[2] + '日'}}\n{{(item.end_time[3] < 10)?('0' + item.end_time[3]): (item.end_time[3])}}: {{(item.end_time[4] < 10)?('0' + item.end_time[4]): (item.end_time[4])}}</text>
+      </view>
+      <view class='text'>
+        <text>{{item.queue_num}}</text>    
+      </view>
+    </view>
+  </view>
+
+  <view class='text_info'>
+    <view class='title'>活动介绍：</view>
+    <view class='text'>{{item_info.text_info}}</view>
+  </view>
+
+  <view class='img_box'>
+    <view class='title'>图片详情:</view>
+    <view class='img'>
+      <image src='{{(item_info.img_info)?("https://yun.hookeii.cn/itemimg/" + item_info.img_info):("/icons/default.png")}}' wx:if='{{item_info.img_info}}' bindtap='preview_img'></image>
+      <view wx:if='{{!item_info.img_info}}'>暂无图片信息</view>
+    </view>
+  </view>
+
+  <view class='info_box'>
+    <view class='title'>联系人:</view>
+    <view class='text'>{{item_info.contacter}}</view>
+  </view>
+
+  <view class='info_box'>
+    <view class='title'>联系方式:</view>
+    <view class='text'>
+        <text>{{item_info.contacts}}</text>
+    </view>
+  </view>
+
+</view>
+
+
+<view class='btnbox'>
+  <view class='btn' hover-class='hover-btn' bindtap='change' wx:if='{{item_info.cancel_status&&my_obj[0].logic_del}}'>取消预定</view>
+  <button disabled='true' wx:if='{{!my_obj[0].logic_del}}' >发起人已取消</button>
+  <button disabled='true' wx:if='{{(!item_info.cancel_status)&&my_obj[0].logic_del}}'>已取消</button>
+</view>

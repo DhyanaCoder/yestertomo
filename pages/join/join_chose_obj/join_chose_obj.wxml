@@ -1,0 +1,52 @@
+<!--pages/join/join_chose_obj/join_chose_obj.wxml-->
+<view class='container'>
+<view class='a_container'>
+  <view class='objs_box'>
+    <view wx:for='{{objs}}' wx:key='{{obj_id}}' wx:for-index='index' data-obj_id='{{item.obj_id}}' data-index='{{index}}' bindtap='choosing' class='{{choosed_index[index]?("choosed_obj_box"):("obj_box")}}' >
+      <view class='obj_content' >{{index+1}}号</view>
+    </view>
+  </view>
+
+  <scroll-view scroll-y="true" style='height: 70%; white-space: nowrap;'>
+
+    <view class='obj_info'>
+
+    <view class='info_box'>
+      <view class='info'>
+        <view class='title'>场地名称：</view>
+        <view class='content'>{{objs[choosing_obj].obj_name}}</view>
+      </view>
+
+      <view class='info'>
+        <view class='title'>当前剩余预订次数：</view>
+        <view class='content'>{{objs[choosing_obj].residue}}</view>
+      </view>
+
+      <view class='info'>
+        <view class='title'>时长：</view>
+        <view class='content'>{{objs[choosing_obj].minOrd_time}}分钟</view>
+      </view>
+
+      <view class='info'>
+        <view class='title'>结束时间：</view>
+        <view class='content'>{{end_timelist[choosing_obj][0] < 10?('0' + end_timelist[choosing_obj][0]):(end_timelist[choosing_obj][0])}}:{{end_timelist[choosing_obj][1] < 10?('0' + end_timelist[choosing_obj][1]):(end_timelist[choosing_obj][1])}}</view>
+      </view>
+
+    </view>
+
+    <view class='img_box'>
+      <view class='title'>图片详情:</view>
+      <view class='img'>
+        <image src='/icons/default.png' wx:if='{{objs[choosing_obj].img_info}}'></image>
+        <view wx:if='{{!objs[choosing_obj].img_info}}'>暂无图片信息</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+
+</view>
+  <view class='btnbox'>
+    <view class='btn' hover-class='hover-btn' bindtap='submit'>确定</view>
+  </view>
+</view>

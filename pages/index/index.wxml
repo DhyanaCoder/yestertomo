@@ -1,48 +1,47 @@
 <!--pages/index/index.wxml-->
-<!--轮播图-->
-<swiper class="image-swiper"  indicator-dots="{{true}}">
-<swiper-item class="image-item" wx:for="{{indexImage}}">
-<image class="image" src="{{item.srcx}}">
-</image>
-</swiper-item>
-</swiper>
+<view class='container'>
 
-<!--正在进行/即将开始-->
-<view class="text" >
-<view ><text class="{{Tag1}}" style="margin-right:55rpx ;font-size:35rpx" bindtap="textTag1">正在进行</text><text class="{{Tag2}}" style="font-size:35rpx"bindtap="textTag2">即将开始</text></view>
+<view class='box'>
+  <view class='swiperbox'>
+      <swiper indicator-dots="true" autoplay="true" circular="true">
+        <block wx:for="{{swiperitem}}" wx:key="url" wx:index='index'>
+          <swiper-item>
+            <view>
+            <image src='{{item.src}}' bindtap="swipclick" data-index='{{index}}'></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+
+  <view class='itembystatus'>
+    <view class='{{show_ing}}ing' bindtap='binditemshow' id='ing'>正在进行</view>
+    <view class='{{show_willbe}}will' bindtap='binditemshow' id='willbe'>即将开始</view>
+  </view>
 </view>
+  <!-- <view class='itemlist'>
+    <view class='itembox'>
+      <view class='imagebox'><image src='/icons/scan.png'></image></view>
+      <view class='contentbbox'>
+        <view class='itemname'>中心湖公园</view>
+        <view class='itemtextinfo'>文本介绍三十字三十字二胺三十字三十字三十字三十字三十字三组成……</view>
+      </view>
+    </view>
+  </view> -->
+    <scroll-view scroll-y='true'  bindescrolltolower='getitems' >
 
-<swiper current="{{currentIndex}}" style='height:725rpx'>
+      <view wx:for="{{showingitems}}" wx:key='pass_id'>
+        <view class='itembox' data-name='{{item.pass_id}}' bindtap='toiteminfo_page'>
+          <view class='imagebox'>
+            <image src='{{(item.img_info)?("https://yun.hookeii.cn/itemimg/" + item.img_info):("/icons/default.png")}}'></image>
+          </view>
+          <view class='contentbbox'>
+            <view class='itemname'>{{item.name}}</view>
+            <view class='itemtextinfo'>{{item.text_info}}</view>
+          </view>
+        </view>
+      </view>
 
+    </scroll-view>
 
-<!--1页面-->
-<swiper-item catchtouchmove="stopTouchMove"><!--滑动触发绑定用于禁止滑动-->
-
-<scroll-view style='height:725rpx' scroll-y="true">
-<view  class="listview" wx:for="{{listview1}}" hover-class="swiper-itemHoverclass">
-<image  class="listview-image" src="{{item.srcx}}"></image>
-<view class="listviewDetail">
-<text style="font-size:40rpx"> {{item.title}} </text>
-<text class="contentText">{{item.content}}</text>
 </view>
-</view>
-</scroll-view>
-</swiper-item>
-
-
-
-
-<!--2页面-->
-<swiper-item catchtouchmove="stopTouchMove">
-<scroll-view style='height:725rpx' scroll-y="true">
-<view  class="listview" wx:for="{{listview2}}" hover-class="swiper-itemHoverclass">
-<image  class="listview-image" src="{{item.srcx}}"></image>
-<view class="listviewDetail">
-<text style="font-size:30rpx"> {{item.title}} </text>
-<text class="contentText">{{item.content}}</text>
-</view>
-</view>
-</scroll-view>
-</swiper-item>
-
-</swiper>

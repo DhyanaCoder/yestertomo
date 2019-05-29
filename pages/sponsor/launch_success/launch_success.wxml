@@ -1,0 +1,13 @@
+<!--pages/sponsor/launch_success/launch_success.wxml-->
+<view class='cantainer'>
+  <view class='box'>
+    <icon type='success' size='250rpx'></icon>
+    <view class='text'>发起成功</view>
+    <view class='text_info'>活动/项目名称: {{item_name}}</view>
+    <view class='text_info'>地点：{{item_address}}</view>
+    <view class='text_info' style='justify-content: space-around;'>您的预定口令为：{{pass_id}}<view class='btn' bindtap='copy' hover-class='hover-btn'>复制</view>
+    </view>
+    <view class='text_info'>马上邀请小伙伴加入吧！</view>
+  </view>
+  <button bindtap='backto_index'>返回</button>
+</view>

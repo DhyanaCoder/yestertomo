@@ -1,7 +1,0 @@
-<view class="text-center" style="margin-top:66rpx">恭喜您,您的预定/排队</view>
-<view class="text-center" font-size="40rpx">项目发起成功</view>
-<view class="text-center" style="color:#6f6c6c; font-size:30rpx;margin-top:92rpx">快点复制口令邀请你的伙伴加入吧！</view>
-<view class="input">
-<input type="text" style="border:1rpx black solid;height:73rpx;width:285rpx;display:inline-block"></input>
-<button type='primary' class='button'>复制</button>
-</view> 

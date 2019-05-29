@@ -1,15 +1,58 @@
-.search{
+/* pages/join/join.wxss */
+.searchboxcontainer{
   display: flex;
-  flex-direction: row;
-  background-color: #e5e5e5;
-  width: 630rpx;
-  height: 60rpx;
-  margin-left: 60rpx;
-  border-radius: 28rpx;
-  align-items: center
+  flex-direction: column-reverse;
+  align-items: center;
+  background-color: #7fffd4;
+  height: 100rpx;
+  width: 100%;
 }
-.layout{
+.searchbox{
   display: flex;
-  flex-direction: column;
-  height: 100vh;
+  align-items: center; /*水平居中对齐*/
+  background-color: #e5e5e5;
+  border-radius: 27rpx;
+  height: 55rpx;
+  width: 632rpx;
+}
+.searchbox image{
+  height: 40rpx;
+  width: 40rpx;
+  margin-left: 25rpx;
+  margin-right: 10rpx;  
+}
+.searchbox .borderleft{
+  height: 70%;
+  width: 3rpx;
+  background-color:  #888888;
+  margin-right: 15rpx;
+}
+.searchbox input{
+  box-sizing: border-box; 
+  width: 512rpx;
+}
+.searchbox .placeholder{
+  text-align: center;
+}
+/* .quest_mark{
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  height: 120rpx;
+  width: 120rpx;
+}
+.quest_mark image{
+  height: 120rpx;
+  width: 120rpx;
+} */
+.quest_mark{
+  position: absolute;
+  height: 120rpx;
+  width: 120rpx;
+  right: 80rpx;
+  bottom: 80rpx;
+}
+.quest_mark image{
+  height: 120rpx;
+  width: 120rpx;
+
 }

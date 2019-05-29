@@ -1,0 +1,14 @@
+<!--pages/person/mysponsorlist/mysponsorlist.wxml-->
+<view class='a_container'>
+  <view class='itembox' wx:for="{{mylaunchitems}}" wx:key="pass_id" data-wd="{{item.pass_id}}" data-overed='{{item.overed}}' hover-class='hover_itembox' bindtap='to_mylauncheditem_detail'>
+    <view class='imagebox'><image src="{{item.img_info?('https://yun.hookeii.cn/itemimg/'+item.img_info):'/icons/default.png'}}"></image></view>
+    <view class='text'>
+      <view class='{{item.logic_del?(item.overed?"over_itemtitle":"ing_itemtitle"):("logic_del_itemtitle")}}'>{{item.item_name}}</view>
+      <view class='itemtextinfo'>{{item.text_info}}</view>
+    </view>
+  </view>
+</view>
+  <import src='../template/template.wxml'/>
+<template is='launch_listnull' wx:if='{{listnull}}'></template>
+
+
